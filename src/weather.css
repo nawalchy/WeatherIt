@@ -1,0 +1,210 @@
+/* 
+AUTHOR:SAMIP REGMI
+GROUP:L4CG1
+APPLICATION:WEATHER APP
+PROTOTYPE:3
+ */
+body {
+    /* 
+    As the overall theme is yellow and blue 
+    i have added 
+    gradient on background , matching the overall theme  
+    */
+    background: linear-gradient(to right, #aceeff, white, #ffdf94);
+}
+
+/* 
+setting default paragraphs font family 
+and color as black
+*/
+p {
+    color: white;
+    font-family: "Rubik", sans;
+}
+#blue_header {
+    color: rgb(43, 113, 255);
+}
+
+#orange_header {
+    color: rgb(255, 176, 28);
+}
+
+/* css for top header ,
+WEATHER IT h1 and svg 
+making sure that SVG and
+h1 remains inline -same line
+*/
+#top_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+#top_header h1 {
+    font-family: 'Dancing Script', cursive;
+    display: inline;
+    font-size: 50px;
+}
+
+#top_header img {
+    width: 10%;
+}
+
+/* css for input */
+input {
+    height: 30px;
+    font-family: 'Dancing Script', cursive;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 10%;
+    color: black;
+    margin: 10px;
+    padding: 5px;
+    background: none;
+    border-bottom: 1px solid black;
+    transition: border-bottom-width 0.5s, width 0.5s;
+}
+
+/*CSS for button  */
+button {
+    background-color: rgb(19, 86, 122);
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 1vh;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* css for table 
+as i have used table for layout 
+*/
+table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    width: 50%;
+    height: 30vh;
+    margin: 20px auto;
+    text-align: left;
+    /*
+    making sure table layout height and width remains constant
+    I was having problem :
+    when address with small length was being fetched 
+    the table was shrinking and 
+    when i gave address with large length the table was expanding
+    but now that problem is fixed
+     */
+    table-layout: fixed;
+
+}
+
+#left_details {
+    /* background-color: rgb(250, 159, 12); */
+    background-color: rgb(12, 154, 164);
+
+    border-radius: 20px;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+#left_details:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 40px, rgba(0, 0, 0, 0.3) 0px 12px 20px;
+    cursor: pointer;
+    /* background-color: rgb(250, 106, 4); */
+    background-color: rgb(11, 97, 103);
+
+}
+
+#left_details div span {
+    font-size: 70px;
+}
+
+#left_details div {
+    text-align: center;
+    display: block;
+    margin: auto;
+
+}
+
+#forecast {
+    margin-top: 10px;
+    font-size: 30px;
+}
+#one,#two,#three,#four,#five {
+    margin-top: 3px;
+    margin-left: 10px;
+    transition: all 0.3s ease-in-out;
+}
+#one:hover,#two:hover,#three:hover,#four:hover,#five:hover {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px, rgba(0, 0, 0, 0.18) 10px 14px 10px;
+    cursor: pointer;
+    /* background-color:rgb(11, 97, 103); */
+    background-color: rgb(250, 106, 4);
+}
+
+.contents {
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(12, 154, 164); */
+    background-color: rgb(250, 159, 12);
+
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.contents span {
+    color: white;
+}
+
+#content {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#date_details p {
+    text-align: center;
+    color: black;
+}
+
+#selectedAddress,#windspeed,#humidity,#temperature,#pressure {
+    display: inline;
+    margin-left: 10px;
+}
+#credits {
+    color: black;
+    margin-top: 0;
+    font-family: 'Popins', sans-serif;
+}
+
+#footer {
+    text-align: center;
+}
+
+#footer p {
+    color: black;
+}
+
+hr {
+    width: 45%;
+}
+@media only screen and (max-width: 768px) {
+    input {
+        width: 30%;
+    }
+    table {
+        width: 100%;
+    }
+    
+    #top_header img {
+        width: 20%;
+    }
+    body {
+        overflow-x: hidden;
+    }
+    
+}

@@ -1,0 +1,143 @@
+<!--
+AUTHOR:SAMIP REGMI
+GROUP:L4CG1
+COLLEGE:BIRATNAGAR INTERNATIONAL COLLEGE,NEPAL
+APPLICATION:WEATHER APP
+PROTOTYPE: 3
+-->
+<!-- -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Weather</title>
+
+        <!-- fonts and icon from https://fonts.google.com/ -->
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <link rel="stylesheet" href="weather.css" />
+
+    <body>
+        <div id="content">
+            <div id="top_header">
+                <h1 id="blue_header">Weather</h1>
+                <h1 id="orange_header">It</h1>
+                <img
+                    src="https://cerulean-bienenstitch-8f308f.netlify.app/cloudy-day-3.svg"
+                    alt=""
+                />
+            </div>
+            <div>
+                <input
+                    type="text"
+                    id="address"
+                    placeholder="Enter city name"
+                    value="Biratnagar"
+                />
+                <button onclick="getForecast()">Send</button>
+            </div>
+            <div id="date_details">
+                <p id="date"></p>
+            </div>
+            <table>
+                <tr>
+                    <!--
+                BIG BLUE BOX OF THE LEFT
+                -->
+                    <td rowspan="8" id="left_details">
+                        <div>
+                            <img src="" alt="" id="icon_img" />
+                            <span class="material-symbols-outlined">
+                                cloud_sync
+                            </span>
+                            <p id="forecast">𝓦𝓮𝓪𝓽𝓱𝓮𝓻 𝓲𝓽</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- REMAINING WEATHER DATA - ORANGE COLOR OF RIGHT -->
+                        <div class="contents" id="one">
+                            <span class="material-symbols-outlined">
+                                Home
+                            </span>
+                            <p id="selectedAddress">ADDRESS</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="contents" id="two">
+                            <span class="material-symbols-outlined"> air </span>
+                            <p id="windspeed">WINDSPEED</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="contents" id="three">
+                            <span class="material-symbols-outlined">
+                                water_drop
+                            </span>
+                            <p id="humidity">HUMIDITY</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="contents" id="four">
+                            <span class="material-symbols-outlined">
+                                thermostat
+                            </span>
+                            <p id="temperature">TEMPERATURE</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="contents" id="five">
+                            <span class="material-symbols-outlined">
+                                water_pump
+                            </span>
+                            <p id="pressure">PRESSURE</p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="contents" id="five">
+                            <span class="material-symbols-outlined">
+                                chevron_right
+                            </span>
+                            <p id="wind_direction">WIND DIRECTION</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- horizontal line to make my footer look good -->
+        <hr />
+        <div id="footer">
+            <p>Made By Samip Regmi @BIRATNAGR INTERNATIONAL COLLEGE - L4CG1</p>
+        </div>
+        <hr />
+    </body>
+    <script src="weather.js"></script>
+</html>
